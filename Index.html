@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="theme-color"
+        content="#229ed9"
+    >
+
+    <title>Chuligram - Login</title>
+
+    <link rel="manifest" href="Manifest.json">
+
+    <link
+        rel="stylesheet"
+        href="Style.css"
+    >
+</head>
+
+<body>
+
+<div class="login-page">
+
+    <div class="login-card">
+
+        <img
+            src="Logo-avatar.png"
+            class="login-logo"
+            alt="Chuligram"
+        >
+
+        <h1>Chuligram</h1>
+
+        <p class="subtitle">
+            Connect. Chat. Share.
+        </p>
+
+        <form onsubmit="login(event)">
+
+            <input
+                id="username"
+                type="text"
+                placeholder="Username"
+                autocomplete="username"
+                required
+            >
+
+            <input
+                id="password"
+                type="password"
+                placeholder="Password"
+                autocomplete="current-password"
+                required
+            >
+
+            <button
+                class="primary-button"
+                type="submit"
+            >
+                Login
+            </button>
+
+        </form>
+
+        <p id="message" class="error-message"></p>
+
+        <div class="test-login">
+            <strong>Test account</strong>
+            <span>alex / 1234</span>
+        </div>
+
+        <div class="test-login">
+            <span>New here?</span>
+            <a href="Pages/Register.html" style="color:#229ed9;">Create an account</a>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="App.js"></script>
+<script>
+if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("Sw.js")
+        .catch(error =>
+            console.log("Service worker:", error)
+        );
+}
+</script>
+
+</body>
+</html>

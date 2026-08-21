@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Profile - Chuligram</title>
+
+    <link
+        rel="stylesheet"
+        href="../Style.css"
+    >
+</head>
+
+<body>
+
+<div class="app">
+
+    <header class="topbar">
+
+        <button
+            class="back-button"
+            onclick="goBack()"
+        >
+            ←
+        </button>
+
+        <h2>Profile</h2>
+
+        <div></div>
+
+    </header>
+
+    <main class="profile-page">
+
+        <div
+            id="profileAvatar"
+            class="profile-avatar"
+        >
+            A
+        </div>
+
+        <h2 id="profileName">
+            Name
+        </h2>
+
+        <p id="profileUsername">
+            @username
+        </p>
+
+        <p id="profileBio">
+            Bio
+        </p>
+
+        <button
+            class="primary-button profile-button"
+            onclick="editProfile()"
+        >
+            Edit Profile
+        </button>
+
+        <button
+            class="secondary-button profile-button"
+            onclick="logout()"
+        >
+            Logout
+        </button>
+
+    </main>
+
+</div>
+
+<script src="../App.js"></script>
+
+<script>
+requireLogin();
+loadProfile();
+</script>
+
+</body>
+</html>

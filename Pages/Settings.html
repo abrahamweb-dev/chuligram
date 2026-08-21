@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Settings - Chuligram</title>
+
+    <link
+        rel="stylesheet"
+        href="../Style.css"
+    >
+</head>
+
+<body>
+
+<div class="app">
+
+    <header class="topbar">
+
+        <button
+            class="back-button"
+            onclick="goTo('Home.html')"
+        >
+            ←
+        </button>
+
+        <h2>Settings</h2>
+
+        <div></div>
+
+    </header>
+
+    <main class="settings-list">
+
+        <div
+            class="setting-profile"
+            onclick="goTo('Profile.html')"
+        >
+
+            <div
+                id="settingsAvatar"
+                class="profile-avatar small"
+            >
+                A
+            </div>
+
+            <div>
+                <strong id="settingsName">
+                    Name
+                </strong>
+
+                <small id="settingsUsername">
+                    @username
+                </small>
+            </div>
+
+        </div>
+
+
+        <div class="settings-section">
+
+            <button
+                class="setting-item"
+                onclick="toggleDarkMode()"
+            >
+                <span>🌙</span>
+
+                <div>
+                    <strong>Appearance</strong>
+                    <small id="darkStatus">
+                        Dark mode
+                    </small>
+                </div>
+
+                <b>›</b>
+            </button>
+
+
+            <button
+                class="setting-item"
+                onclick="toggleNotifications()"
+            >
+                <span>🔔</span>
+
+                <div>
+                    <strong>Notifications</strong>
+                    <small id="notificationStatus">
+                        On
+                    </small>
+                </div>
+
+                <b>›</b>
+            </button>
+
+
+            <button
+                class="setting-item"
+                onclick="alert('Privacy settings coming soon')"
+            >
+                <span>🔒</span>
+
+                <div>
+                    <strong>Privacy</strong>
+                    <small>
+                        Security and privacy
+                    </small>
+                </div>
+
+                <b>›</b>
+            </button>
+
+
+            <button
+                class="setting-item"
+                onclick="alert('Chuligram 1.0')"
+            >
+                <span>ℹ️</span>
+
+                <div>
+                    <strong>About</strong>
+                    <small>
+                        Chuligram
+                    </small>
+                </div>
+
+                <b>›</b>
+            </button>
+
+        </div>
+
+
+        <button
+            class="logout-button"
+            onclick="logout()"
+        >
+            Log Out
+        </button>
+
+    </main>
+
+    <nav class="bottom-nav">
+
+        <button onclick="goTo('Home.html')">
+            <span>💬</span>
+            Chats
+        </button>
+
+        <button onclick="goTo('Contacts.html')">
+            <span>👥</span>
+            Contacts
+        </button>
+
+        <button class="active">
+            <span>⚙️</span>
+            Settings
+        </button>
+
+    </nav>
+
+</div>
+
+<script src="../App.js"></script>
+
+<script>
+requireLogin();
+loadSettings();
+</script>
+
+</body>
+</html>

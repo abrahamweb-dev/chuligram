@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Chat - Chuligram</title>
+
+    <link
+        rel="stylesheet"
+        href="../Style.css"
+    >
+</head>
+
+<body>
+
+<div class="chat-page">
+
+    <header class="chat-header">
+
+        <button
+            class="back-button"
+            onclick="goTo('Home.html')"
+        >
+            ←
+        </button>
+
+        <div
+            id="chatAvatar"
+            class="avatar"
+        >
+            A
+        </div>
+
+        <div class="chat-user-info">
+
+            <strong id="chatName">
+                Chat
+            </strong>
+
+            <small id="chatStatus">
+                Offline
+            </small>
+
+        </div>
+
+    </header>
+
+    <main
+        id="messages"
+        class="messages"
+    ></main>
+
+    <form
+        class="message-box"
+        onsubmit="sendMessage(event)"
+    >
+
+        <input
+            id="messageInput"
+            type="text"
+            placeholder="Write a message..."
+            autocomplete="off"
+        >
+
+        <button type="submit">
+            ➤
+        </button>
+
+    </form>
+
+</div>
+
+<script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+<script src="../App.js"></script>
+
+<script>
+loadChat();
+</script>
+
+</body>
+</html>
